@@ -43,5 +43,6 @@ end
 gem 'mongoid'
 gem 'materialize-sass'
 gem 'haml-rails'
+gem 'github_api'
 
 gem 'rails_12factor', group: :production
