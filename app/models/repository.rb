@@ -18,7 +18,7 @@ class Repository
   validates :full_name, :html_url, :url, uniqueness: true
 
   has_and_belongs_to_many :languages
-  has_many :issues
+  has_many :issues, dependent: :destroy
 
   before_validation :extract_user
 
