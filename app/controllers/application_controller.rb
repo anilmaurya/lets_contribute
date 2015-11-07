@@ -5,7 +5,10 @@ class ApplicationController < ActionController::Base
 
   def index
     @issue = Issue.all.sample
-    @languages = Language.all
+
+    @languages = Language.all.map do |language|
+      { id: language.id, name: language.name }
+    end
 
     render 'home/index'
   end

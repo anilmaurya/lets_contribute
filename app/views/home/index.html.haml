@@ -10,9 +10,8 @@
               Lets contribute and make your presence in Open Source community.
               we will show you random open issues on repository related to your choice of language,
       .row.center
-        .language_select
-          .input-field.blue-grey-text.text-darken4
-            .center-align= select_tag :language, languages_select, id: :language_select
+        .input-field.black-text
+          = text_field_tag :language, nil, class: 'typeahead', data: { placeholder: 'Which language ?' }
       .row.center.blue-grey-text.text-darken4
         %h5 Not sure which language to select ?
       .row.center
@@ -27,7 +26,6 @@
       .row.center
         %h5.header.col.s12.light A modern responsive front-end framework based on Material Design
   .parallax
-    = image_tag 'background2'
 .container
   .section
     / Icon Section
@@ -57,3 +55,6 @@
         %h3
           %i.mdi-content-send.brown-text
         %h4 Contact Us
+
+:javascript
+  var languages = #{@languages.to_json}

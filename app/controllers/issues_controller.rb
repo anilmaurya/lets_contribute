@@ -9,7 +9,7 @@ class IssuesController < ApplicationController
 
   def get_issue
     if params[:language_id].present?
-      @issue = Issue.where(:language_id.in => [params[:language_id]]).sample
+      @issue = Issue.first#Issue.where(:language_id.in => [params[:language_id]]).sample
     else
       @issue = Issue.all.sample
     end
