@@ -9,6 +9,7 @@ class Issue
   validates :html_url, :title, presence: true
   validates :html_url, uniqueness: true
 
-  has_and_belongs_to_many :reposotories
+  belongs_to :repository
   has_and_belongs_to_many :languages
+
 end

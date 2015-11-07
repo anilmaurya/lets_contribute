@@ -8,7 +8,7 @@ class Repository
   field :description, type: String
   field :user, type: String
   field :has_issues, type: Mongoid::Boolean, default: false
-  
+
   field :stars_count, type: Integer, default: 0
   field :forks_count, type: Integer, default: 0
   field :watchers_count, type: Integer, default: 0
@@ -18,9 +18,26 @@ class Repository
   validates :full_name, :html_url, :url, uniqueness: true
 
   has_and_belongs_to_many :languages
-  has_and_belongs_to_many :issues
+  has_many :issues
 
   before_validation :extract_user
+
+  def fetch_issues
+    issue_list = Github::Client::Issues.new.list(user: user, repo: name, per_page: 1000)
+
+    issue_list.each do |issue|
+      next unless issue.html_url.include?('issue')
+      new_issue = self.issues.find_or_create_by(html_url: issue.html_url) 
+      new_issue.update_attributes(title: issue.title, comments_count: issue.comments, 
+                         body: issue.body, milestone: issue.milestone, languages: languages) 
+    end
+  end
+
+  def self.collect_data
+    self.each do |repo|
+      repo.fetch_issues
+    end
+  end
 
   private
 
