@@ -6,9 +6,12 @@
  * Made By MaterializeCSS.com
  */
 
-nav ul a,
-nav .brand-logo {
-  color: #444;
+html {
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+div.parallax img {
+  transform: translate3d(-61%, 95px, 0px);
 }
 
 p {

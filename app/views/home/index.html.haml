@@ -1,20 +1,17 @@
 #index-banner.parallax-container
   .section.no-pad-bot
     .container
-      %br/
-      %br/
-      %h1.header.center.teal-text.text-lighten-2 Let's Contribute
+      %h1.header.center.blue-grey-text.text-darken4 Let's Contribute
       .row.center
-        %h5.header.col.s12.light A modern responsive front-end framework based on Material Design
+        .col.s6
+          .input-field.blue-grey-text.text-darken4
+            .center-align= select_tag :language, languages_select
+      .row.center.blue-grey-text.text-darken4
+        %h5 Not sure which language to select ?
       .row.center
-      .row.center
-        %a.btn-large.waves-effect.waves-light
-          %i.material-icons.right equalizer
+        %a.btn-large.blue-grey.waves-effect.waves-light
           I'm feeling Lucky
-      %br/
-      %br/
   .parallax
-    = image_tag 'background1'
 .container
   .section
     / Icon Section
