@@ -13,6 +13,15 @@
           I'm feeling Lucky
   .parallax
 .container
+  = render partial: 'home/issue_detail'
+.parallax-container.valign-wrapper
+  .section.no-pad-bot
+    .container
+      .row.center
+        %h5.header.col.s12.light A modern responsive front-end framework based on Material Design
+  .parallax
+    = image_tag 'background2'
+.container
   .section
     / Icon Section
     .row
@@ -34,13 +43,6 @@
             %i.material-icons settings
           %h5.center Easy to work with
           %p.light We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
-.parallax-container.valign-wrapper
-  .section.no-pad-bot
-    .container
-      .row.center
-        %h5.header.col.s12.light A modern responsive front-end framework based on Material Design
-  .parallax
-    = image_tag 'background2'
 .container
   .section
     .row
