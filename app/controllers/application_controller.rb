@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
+    @issue = Issue.all.sample
     @languages = Language.all
 
     render 'home/index'

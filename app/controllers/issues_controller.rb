@@ -2,7 +2,7 @@ class IssuesController < ApplicationController
   before_action :get_issue, only: :index
 
   def index
-    render json: @issue, serializer: IssuesSerializer
+    render "index.js.haml"
   end
 
   private

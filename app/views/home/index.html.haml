@@ -19,8 +19,8 @@
         %a.btn-large.blue-grey.waves-effect.waves-light
           I'm feeling Lucky
   .parallax
-.container
-  = render partial: 'home/issue_detail'
+.container.issue_detail
+  = render 'home/issue_detail', issue: @issue, repository: @issue.repository
 .parallax-container.valign-wrapper
   .section.no-pad-bot
     .container
