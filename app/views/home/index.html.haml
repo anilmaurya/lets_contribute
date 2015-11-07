@@ -1,20 +1,24 @@
 #index-banner.parallax-container
   .section.no-pad-bot
     .container
-      %br/
-      %br/
-      %h1.header.center.teal-text.text-lighten-2 Let's Contribute
+      %h1.header.center.blue-grey-text.text-darken4 Let's Contribute
+      .row.site_description
+        .col.s12
+          .card.card-panel.blue-grey.darken-1
+            %span.card-title Bored of your daily job ?
+            %p
+              Lets contribute and make your presence in Open Source community.
+              we will show you random open issues on repository related to your choice of language,
       .row.center
-        %h5.header.col.s12.light A modern responsive front-end framework based on Material Design
+        .language_select
+          .input-field.blue-grey-text.text-darken4
+            .center-align= select_tag :language, languages_select, id: :language_select
+      .row.center.blue-grey-text.text-darken4
+        %h5 Not sure which language to select ?
       .row.center
-      .row.center
-        %a.btn-large.waves-effect.waves-light
-          %i.material-icons.right equalizer
+        %a.btn-large.blue-grey.waves-effect.waves-light
           I'm feeling Lucky
-      %br/
-      %br/
   .parallax
-    = image_tag 'background1'
 .container
   = render partial: 'home/issue_detail'
 .parallax-container.valign-wrapper

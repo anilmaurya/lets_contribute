@@ -55,4 +55,6 @@ Rails.application.routes.draw do
   #   end
 
   root 'application#index'
+
+  resources :issues, only: [:index]
 end

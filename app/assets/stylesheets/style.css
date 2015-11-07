@@ -6,9 +6,12 @@
  * Made By MaterializeCSS.com
  */
 
-nav ul a,
-nav .brand-logo {
-  color: #444;
+html {
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+div.parallax img {
+  transform: translate3d(-61%, 95px, 0px);
 }
 
 p {
@@ -44,14 +47,21 @@ p {
     top: 0;
   }
 }
-
+#index-banner{
+  background-color: lightblue;
+}
 .icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
   font-size: inherit;
 }
-
+.site_description .card{
+  margin: auto 18%;
+}
 footer.page-footer {
   margin: 0;
+}
+.language_select{
+  margin: auto 36%;
 }

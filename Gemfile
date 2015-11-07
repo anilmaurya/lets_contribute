@@ -44,5 +44,6 @@ gem 'mongoid'
 gem 'materialize-sass'
 gem 'haml-rails'
 gem 'github_api'
+gem 'active_model_serializers'
 
 gem 'rails_12factor', group: :production
