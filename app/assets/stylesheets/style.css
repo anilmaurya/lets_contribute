@@ -56,7 +56,9 @@ p {
 .icon-block .material-icons {
   font-size: inherit;
 }
-
+.site_description .card{
+  margin: auto 18%;
+}
 footer.page-footer {
   margin: 0;
 }
