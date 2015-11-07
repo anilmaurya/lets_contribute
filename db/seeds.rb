@@ -7,10 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
 LANGUAGE_NAMES = ['arc', 'assembly', 'c', 'c#', 'c++', 'css', 'clojure', 'coffeescript', 'coldfusion', 
-             'commmonlisp', 'd', 'dylan', 'elixir', 'emacs lisp', 'erlang', 'fortran', 'fancy', 
-             'gettext catalog', 'go', 'groovy', 'html', 'haskell', 'java', 'javascript', 'julia', 
-             'objective-c', 'php', 'perl', 'powershell', 'python', 'racket', 'ruby',
-             'rust', 'scala', 'scheme', 'shell', 'standard ml', 'tex', 'typescript', 'vala', 'viml']
+                  'd', 'dylan', 'elixir', 'erlang', 'fortran', 'fancy', 
+                  'gettext catalog', 'go', 'groovy', 'html', 'haskell', 'java', 'javascript', 'julia', 
+                  'objective-c', 'php', 'perl', 'powershell', 'python', 'racket', 'ruby',
+                  'rust', 'scala', 'scheme', 'shell', 'tex', 'typescript', 'vala', 'viml']
 
 LANGUAGE_NAMES.each do |name|
   Language.create(name: name)
