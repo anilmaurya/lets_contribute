@@ -43,6 +43,6 @@ end
 gem 'mongoid'
 gem 'materialize-sass'
 gem 'haml-rails'
-
-#For github api calls 
 gem 'github_api'
+
+gem 'rails_12factor', group: :production

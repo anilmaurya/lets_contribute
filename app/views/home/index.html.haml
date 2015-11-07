@@ -3,15 +3,27 @@
     .container
       %br/
       %br/
-      %h1.header.center.teal-text.text-lighten-2 Parallax Template
+      %h1.header.center.teal-text.text-lighten-2 Let's Contribute
       .row.center
         %h5.header.col.s12.light A modern responsive front-end framework based on Material Design
       .row.center
-        %a#download-button.btn-large.waves-effect.waves-light.teal.lighten-1{:href => "http://materializecss.com/getting-started.html"} Get Started
+      .row.center
+        %a.btn-large.waves-effect.waves-light
+          %i.material-icons.right equalizer
+          I'm feeling Lucky
       %br/
       %br/
   .parallax
     = image_tag 'background1'
+.container
+  = render partial: 'home/issue_detail'
+.parallax-container.valign-wrapper
+  .section.no-pad-bot
+    .container
+      .row.center
+        %h5.header.col.s12.light A modern responsive front-end framework based on Material Design
+  .parallax
+    = image_tag 'background2'
 .container
   .section
     / Icon Section
@@ -34,13 +46,6 @@
             %i.material-icons settings
           %h5.center Easy to work with
           %p.light We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
-.parallax-container.valign-wrapper
-  .section.no-pad-bot
-    .container
-      .row.center
-        %h5.header.col.s12.light A modern responsive front-end framework based on Material Design
-  .parallax
-    = image_tag 'background2'
 .container
   .section
     .row
