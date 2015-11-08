@@ -1,4 +1,4 @@
-#index-banner.parallax-container
+#index-banner
   .section.no-pad-bot
     .container
       %h1.header.center.blue-grey-text.text-darken4 Let's Contribute
@@ -20,13 +20,13 @@
 .container.issue_detail
   = render 'home/issue_detail', issue: @issue, repository: @issue.repository
 
-.parallax-container.why_contribute
+.why_contribute
   .container
     .section
       = render 'home/why_contribute'
       .refs= link_to 'refs', 'http://www.websitemagazine.com/content/blogs/posts/archive/2013/08/29/why-developers-contribute-to-open-source-projects.aspx'
 
-.parallax-container.about_us
+.about_us
   .container
     .section
       = render 'home/about_us'
