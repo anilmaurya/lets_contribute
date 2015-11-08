@@ -54,7 +54,9 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  root 'application#index'
+  root 'home#index'
 
   resources :issues, only: [:index]
+
+  get 'about_us', to: 'home#about_us'
 end

@@ -25,7 +25,7 @@
       .col.s12.center
         %h3
           %i.mdi-content-send.brown-text
-        %h4 Contact Us
+        %h4= link_to  'About us', about_us_path
 
 :javascript
   var languages = #{@languages.to_json}
