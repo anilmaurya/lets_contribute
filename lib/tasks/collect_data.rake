@@ -10,7 +10,7 @@ task :collect_data => :environment do
 =end
   Repository.all.each do |repo|
     repo.fetch_issues
-    sleep_time = rand(1.2..5.25).seconds
+    sleep_time = rand(5.2..9.25).seconds
     sleep(sleep_time)
   end
 end
