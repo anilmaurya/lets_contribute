@@ -27,9 +27,9 @@ class Repository
 
     issue_list.each do |issue|
       next unless issue.html_url.include?('issue')
-      new_issue = self.issues.find_or_create_by(html_url: issue.html_url) 
-      new_issue.update_attributes(title: issue.title, comments_count: issue.comments, 
-                         body: issue.body, milestone: issue.milestone, languages: languages) 
+      new_issue = self.issues.find_or_create_by(html_url: issue.html_url)
+      new_issue.update_attributes(title: issue.title, comments_count: issue.comments,
+                         body: issue.body, milestone: issue.milestone, languages: languages)
     end
   end
 
@@ -37,6 +37,11 @@ class Repository
     self.each do |repo|
       repo.fetch_issues
     end
+  end
+
+  def owner_url
+    url = self.html_url
+    return url.gsub(/\/[a-z]+*$/, '')
   end
 
   private
