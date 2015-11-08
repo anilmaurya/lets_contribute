@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-    @issue = Issue.all.sample
+    @issue = Issue.order(updated_at: :asc).first
 
     @languages = Language.all.map do |language|
       { id: language.id, name: language.name }

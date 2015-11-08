@@ -2,16 +2,16 @@ class IssuesController < ApplicationController
   before_action :get_issue, only: :index
 
   def index
-    render "index.js.haml"
+    render 'index'
   end
 
   private
 
   def get_issue
     if params[:language_id].present?
-      @issue = Issue.first#Issue.where(:language_id.in => [params[:language_id]]).sample
+      @issue = Issue.where(:language_id.in => [params[:language_id]]).order(updated_at: :asc).first
     else
-      @issue = Issue.all.sample
+      @issue = Issue.order(updated_at: :asc).first
     end
   end
 end
