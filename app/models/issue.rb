@@ -8,6 +8,10 @@ class Issue
   field :body, type: String
   field :milestone, type: String
   field :state, type: String
+  field :created_by_name, type: String
+  field :created_by_url, type: String
+  field :issue_created_at, type: DateTime
+  field :creator_avatar, type: String
 
   validates :html_url, :title, presence: true
   validates :html_url, uniqueness: true
