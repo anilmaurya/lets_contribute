@@ -27,5 +27,9 @@ $ ->
     $.get('/issues?language_id=' + suggestion.id);
   )
 
-  $('body').on 'click', 'button:contains(Next)', ->
-    $.get('/issues?language_id=' + $('input[name="language"]').data('id'))
+  $('body').on 'click', 'button:contains(Next), .feeling_lucky', ->
+    id = $('input[name="language"]').data('id')
+    if(id != undefined)
+      $.get('/issues?language_id=' + $('input[name="language"]').data('id'))
+    else
+      $.get('/issues')
