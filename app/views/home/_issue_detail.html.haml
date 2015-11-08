@@ -30,7 +30,7 @@
       %span.grey-text.text-lighten-1= issue_number(issue)
   %p.isssue-description
     %p
-      = markdown(issue.body)
+      .markdown-body= markdown(issue.body)
     %button.btn.waves-effect.waves-light{:name => "action", :type => "submit"}
       Next
       %i.material-icons.right send

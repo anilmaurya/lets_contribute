@@ -100,3 +100,7 @@ h2.project-details-title {
     margin-right: 10px;
   }
 }
+.about_us .card-image{
+  height: 370px;
+  overflow: hidden;
+}

@@ -1,6 +1,6 @@
 module ApplicationHelper
   def markdown(body)
-    Markdown.new(body).to_html.html_safe
+    MarkdownService.call(body)
   end
 
   def issue_number(issue)

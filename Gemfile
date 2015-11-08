@@ -47,5 +47,6 @@ gem 'github_api'
 gem 'active_model_serializers'
 gem 'twitter-typeahead-rails'
 gem 'redcarpet'
+gem 'rouge'
 
 gem 'rails_12factor', group: :production

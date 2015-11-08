@@ -11,22 +11,21 @@
               we will show you random open issues on repository related to your choice of language,
       .row.center
         .input-field.black-text
-          = text_field_tag :language, nil, class: 'typeahead', data: { placeholder: 'Which language ?' }
+          = text_field_tag :language, nil, class: 'typeahead',  placeholder: 'Which language ?'
       .row.center.blue-grey-text.text-darken4
         %h5 Not sure which language to select ?
       .row.center
-        %a.btn-large.blue-grey.waves-effect.waves-light
+        %a.btn-large.blue-grey.waves-effect.waves-light.feeling_lucky
           I'm feeling Lucky
 .container.issue_detail
   = render 'home/issue_detail', issue: @issue, repository: @issue.repository
-
 .container
   .section
     .row
       .col.s12.center
         %h3
           %i.mdi-content-send.brown-text
-        %h4 Contact Us
+        %h4= link_to  'About us', about_us_path
 
 :javascript
   var languages = #{@languages.to_json}

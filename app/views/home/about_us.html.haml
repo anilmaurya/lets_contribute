@@ -1,0 +1,33 @@
+.row
+  %h2.center TEAM
+.row.about_us
+  .col.s12.m4
+    .card
+      .card-image
+        = image_tag 'yogesh.jpg'
+      .card-content
+        %h5.center Yogesh Khater
+      .card-action
+        %a{:href => "http://github.com/yogeshjain999"} Github
+
+  .col.s12.m4
+    .card
+      .card-image
+        = image_tag 'shweta.jpg'
+      .card-content
+        %h5.center Shweta Kale
+      .card-action
+        %a{:href => "http://github.com/Shwetakale"} Github
+
+  .col.s12.m4
+    .card
+      .card-image
+        = image_tag 'anil.jpg'
+      .card-content
+        %h5.center Anil Maurya
+      .card-action
+        %a{:href => "http://github.com/anilmaurya"} Github
+
+  .row
+    %h3.center
+      = link_to  'Home', root_path
