@@ -1,9 +1,9 @@
 .project-details
   %h2.project-details-title
-    %a{:href => "https://github.com/anilmaurya", :target => "_blank"}
+    %a{:href => "#{repository && repository.owner_url}", :target => "_blank"}
       = repository && repository.user
     \/
-    %a{:href => "https://github.com/anilmaurya/code_detective", :target => "_blank"}
+    %a{:href => "#{repository && repository.html_url}", :target => "_blank"}
       = repository && repository.name
   %p.project-details-description
     = repository && repository.description
