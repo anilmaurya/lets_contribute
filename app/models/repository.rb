@@ -32,6 +32,11 @@ class Repository
       new_issue.update_attributes(title: issue.title, comments_count: issue.comments,
                          body: issue.body, milestone: issue.milestone, state: issue.state, 
                          languages: languages)
+
+      languages.each do |language|
+        language.issues << new_issue
+        language.save
+      end
     end
   end
 
