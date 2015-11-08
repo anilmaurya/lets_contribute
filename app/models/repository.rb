@@ -43,12 +43,6 @@ class Repository
     end
   end
 
-  def self.collect_data
-    self.each do |repo|
-      repo.fetch_issues
-    end
-  end
-
   def owner_url
     url = self.html_url
     return url.gsub(/\/[a-z]+$/, '')

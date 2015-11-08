@@ -13,6 +13,7 @@ task :collect_data => :environment do
 
   Repository.all.each do |repo|
     begin
+      p "#repos -- #{repo.name}"
       repo.fetch_issues
     rescue Exception => e
       p "Exception: #{e.to_s}"

@@ -21,10 +21,4 @@ class Language
       repository.save!
     end
   end
-
-  def self.collect_data
-    self.each do |language|
-      language.fetch_repositories
-    end
-  end
 end
