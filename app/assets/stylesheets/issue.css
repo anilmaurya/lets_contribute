@@ -101,6 +101,9 @@ h2.project-details-title {
   }
 }
 .about_us .card-image{
-  height: 370px;
+  height: 250px;
   overflow: hidden;
+}
+.card  p{
+  color: #fff;
 }

@@ -58,5 +58,4 @@ Rails.application.routes.draw do
 
   resources :issues, only: [:index]
 
-  get 'about_us', to: 'home#about_us'
 end
