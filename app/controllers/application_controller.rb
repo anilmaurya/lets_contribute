@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   def index
     @issue = Issue.order(updated_at: :asc).first
 
-    @languages = Language.all.map do |language|
+    @languages = Language.not.where(issue_ids: nil).map do |language|
       { id: language.id, name: language.name }
     end
 
