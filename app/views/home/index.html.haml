@@ -1,22 +1,32 @@
 #index-banner
   .section.no-pad-bot
     .container
-      %h1.header.center.blue-grey-text.text-darken4 Let's Contribute
-      .row.site_description
-        .col.s12
-          .card.card-panel.blue-grey.darken-1
-            %span.card-title Bored of your daily job ?
-            %p
-              Lets contribute and make your presence in Open Source community.
-              we will show you random open issues on repository related to your choice of language,
       .row.center
-        .input-field.black-text
-          = text_field_tag :language, nil, class: 'typeahead',  placeholder: 'Which language ?'
-      .row.center.blue-grey-text.text-darken4
+        %h1
+          %span.header.center.red-text.text-lighten-1 Let's
+          %span.header.center.white-text.text-lighten-1 Contribute
+      .row
+        .col.s4.offset-s4
+        %blockquote
+          %p.flow-text
+            .card.brown.darken-3
+              .card-content.white-text
+                %span.card-title.red-text Tired of your daily job ?
+                %p
+                  Lets contribute and make your presence in Open Source community !!!
+                  %br
+                  We will show you any open issue, choosen randomaly from any repository. Or any issue from a repository of your choice of language.
+
+      .row.center
+        .col.s6.offset-s3
+          .input-field.white-text
+            = text_field_tag :language, nil, class: 'typeahead',  placeholder: 'Which language ? (for eg. Ruby)'
+      .row.center.white-text
         %h5 Not sure which language to select ?
       .row.center
-        %a.btn-large.blue-grey.waves-effect.waves-light.feeling_lucky
+        %a.btn-large.red.waves-effect.waves-light.feeling_lucky.lighten-1
           I'm feeling Lucky
+
 .container.issue_detail
   = render 'home/issue_detail', issue: @issue, repository: @issue.repository
 
@@ -24,7 +34,6 @@
   .container
     .section
       = render 'home/why_contribute'
-      .refs= link_to 'refs', 'http://www.websitemagazine.com/content/blogs/posts/archive/2013/08/29/why-developers-contribute-to-open-source-projects.aspx'
 
 .about_us
   .container

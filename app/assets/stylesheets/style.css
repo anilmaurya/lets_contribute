@@ -10,6 +10,10 @@ html {
   font-family: GillSans, Calibri, Trebuchet, sans-serif;
 }
 
+a:link {
+  color: #e4796b;
+}
+
 div.parallax img {
   transform: translate3d(-61%, 95px, 0px);
 }
@@ -23,9 +27,6 @@ p {
 }
 
 .parallax-container {
-  min-height: 530px;
-  height: auto;
-  color: rgba(255,255,255,.9);
 }
 .parallax-container .section {
   width: 100%;
@@ -47,20 +48,20 @@ p {
   }
 }
 #index-banner{
-  background-color: #E5EEFF;
+  background-image: url("background.jpg");
+  background-size: 100% 100%;
+  padding-bottom: 1%;
 }
 .why_contribute{
-  background-color: #EBFAFA;
+  background: url("background.jpg");
+  background-size: 100% 100%;
+  padding-bottom: 1%;
 }
-.why_contribute h3{
-  color: gray;
+
+.about_us h3 {
+  color: #e4796b;
 }
-.about_us{
-  background-color: #E0E0EB;
-}
-.about_us  h3{
-  color: gray;
-}
+
 .icon-block {
   padding: 0 15px;
 }
@@ -74,6 +75,8 @@ footer.page-footer {
   margin: 0;
 }
 
+.twitter-typeahead { width: 100%; } 
+
 .tt-query {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
@@ -85,9 +88,10 @@ footer.page-footer {
 }
 
 .tt-menu {    /* used to be tt-dropdown-menu in older versions */
-  width: 80%;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  width: 100%;
+  color: #fff;
+  background-color: #4e342e !important;
+  border: 1px solid #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -104,16 +108,46 @@ footer.page-footer {
 
 .tt-suggestion.tt-cursor,.tt-suggestion:hover {
   color: #fff;
-  background-color: #0097cf;
+  background-color: #ef5350;
 }
 
 .tt-suggestion p {
   margin: 0;
 }
-.card{
+
+.card {
   background-color: #F5F5F0;
   color: grey;
 }
 .card .card-title {
     color: beige;
-  }
+}
+
+.input-field {
+  font-weight: bolder;
+}
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #ef5350;
+  box-shadow: 0 1px 0 0 #ef5350;
+}
+
+::-webkit-input-placeholder {
+  color: #fff;
+  text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #fff;  
+  text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #fff;  
+  text-align: center;
+}
+
+:-ms-input-placeholder {  
+  color: #fff;
+  text-align: center;
+}
