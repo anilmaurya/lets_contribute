@@ -9,8 +9,11 @@ task :collect_data => :environment do
   end
 =end
   Repository.all.each do |repo|
-    repo.fetch_issues
-    sleep_time = rand(5.2..9.25).seconds
-    sleep(sleep_time)
+    begin
+      repo.fetch_issues
+    rescue Exception => e
+      sleep_time = rand(5.2..9.25).seconds
+      sleep(sleep_time)
+    end
   end
 end
