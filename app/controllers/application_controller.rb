@@ -4,7 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def index
-    @languages = Language.all
+    @issue = Issue.all.sample
+
+    @languages = Language.all.map do |language|
+      { id: language.id, name: language.name }
+    end
 
     render 'home/index'
   end

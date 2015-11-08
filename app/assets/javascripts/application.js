@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require materialize-sprockets
+//= require twitter/typeahead.min
 //= require_tree .

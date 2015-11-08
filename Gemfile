@@ -45,5 +45,6 @@ gem 'materialize-sass'
 gem 'haml-rails'
 gem 'github_api'
 gem 'active_model_serializers'
+gem 'twitter-typeahead-rails'
 
 gem 'rails_12factor', group: :production

@@ -1,30 +1,34 @@
 .project-details
   %h2.project-details-title
-    %a{:href => "https://github.com/anilmaurya", :target => "_blank"} anilmaurya
+    %a{:href => "https://github.com/anilmaurya", :target => "_blank"}
+      = repository && repository.user
     \/
-    %a{:href => "https://github.com/anilmaurya/code_detective", :target => "_blank"} code detective
-  %p.project-details-description Project detail
+    %a{:href => "https://github.com/anilmaurya/code_detective", :target => "_blank"}
+      = repository && repository.name
+  %p.project-details-description
+    = repository && repository.description
   %ul.github-stats
     %li.github-stat
       .github-stat-count
-        834
+        = repository && repository.stars_count
       .github-stat-type Stars
     %li.github-stat
       .github-stat-count
-        152
+        = repository && repository.forks_count
       .github-stat-type Forks
     %li.github-stat
       .github-stat-count
-        144
+        = repository && repository.open_issues_count
       .github-stat-type Open issues
     %li.github-stat
       .github-stat-count
-        71
-      .github-stat-type Subscribers
-  %p.issue-title Issue title here
+        = repository && repository.watchers_count
+      .github-stat-type Watchers
+  %p.issue-title
+    = issue.title
   %p.isssue-description
     %p
-      Issue Decription here
+      = issue.body
     %button.btn.waves-effect.waves-light{:name => "action", :type => "submit"}
       Next
       %i.material-icons.right send
