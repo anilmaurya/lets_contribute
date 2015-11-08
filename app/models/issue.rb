@@ -5,6 +5,7 @@ class Issue
   field :comments_count, type: Integer
   field :body, type: String
   field :milestone, type: String
+  field :state, type: String
 
   validates :html_url, :title, presence: true
   validates :html_url, uniqueness: true
