@@ -48,11 +48,13 @@ p {
   }
 }
 #index-banner{
-  background: url("background.jpg") repeat-y;
+  background-image: url("background.jpg");
+  background-size: 100% 100%;
   padding-bottom: 1%;
 }
 .why_contribute{
-  background: url("background.jpg") repeat-y;
+  background: url("background.jpg");
+  background-size: 100% 100%;
   padding-bottom: 1%;
 }
 
