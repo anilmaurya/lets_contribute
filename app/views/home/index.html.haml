@@ -20,14 +20,16 @@
 .container.issue_detail
   = render 'home/issue_detail', issue: @issue, repository: @issue.repository
 
-.container
-  .section
-    = render 'home/why_contribute'
-    .refs= link_to 'refs', 'http://www.websitemagazine.com/content/blogs/posts/archive/2013/08/29/why-developers-contribute-to-open-source-projects.aspx'
+.parallax-container.why_contribute
+  .container
+    .section
+      = render 'home/why_contribute'
+      .refs= link_to 'refs', 'http://www.websitemagazine.com/content/blogs/posts/archive/2013/08/29/why-developers-contribute-to-open-source-projects.aspx'
 
-.container
-  .section
-    = render 'home/about_us'
+.parallax-container.about_us
+  .container
+    .section
+      = render 'home/about_us'
 
 :javascript
   var languages = #{@languages.to_json}

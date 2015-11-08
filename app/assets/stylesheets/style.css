@@ -24,7 +24,6 @@ p {
 
 .parallax-container {
   min-height: 530px;
-  line-height: 0;
   height: auto;
   color: rgba(255,255,255,.9);
 }
@@ -48,7 +47,19 @@ p {
   }
 }
 #index-banner{
-  background-color: lightblue;
+  background-color: #E5EEFF;
+}
+.why_contribute{
+  background-color: #EBFAFA;
+}
+.why_contribute h3{
+  color: gray;
+}
+.about_us{
+  background-color: #E0E0EB;
+}
+.about_us  h3{
+  color: gray;
 }
 .icon-block {
   padding: 0 15px;
@@ -99,3 +110,10 @@ footer.page-footer {
 .tt-suggestion p {
   margin: 0;
 }
+.card{
+  background-color: #F5F5F0;
+  color: grey;
+}
+.card .card-title {
+    color: beige;
+  }
