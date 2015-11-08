@@ -30,7 +30,13 @@ class Repository
       next unless issue.html_url.include?('issue')
       new_issue = self.issues.find_or_create_by(html_url: issue.html_url)
       new_issue.update_attributes(title: issue.title, comments_count: issue.comments,
-                         body: issue.body, milestone: issue.milestone, languages: languages)
+                         body: issue.body, milestone: issue.milestone, state: issue.state, 
+                         languages: languages)
+
+      languages.each do |language|
+        language.issues << new_issue
+        language.save
+      end
     end
   end
 

@@ -25,10 +25,12 @@
         = repository && repository.watchers_count
       .github-stat-type Watchers
   %p.issue-title
-    = issue.title
+    %h5
+      = link_to issue.title, issue.html_url, target: :_blank
+      %span.grey-text.text-lighten-1= issue_number(issue)
   %p.isssue-description
     %p
-      = issue.body
+      = markdown(issue.body)
     %button.btn.waves-effect.waves-light{:name => "action", :type => "submit"}
       Next
       %i.material-icons.right send
