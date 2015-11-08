@@ -23,7 +23,8 @@ class Repository
   before_validation :extract_user
 
   def fetch_issues
-    issue_list = Github::Client::Issues.new.list(user: user, repo: name, per_page: 1000)
+    issue_list = Github::Client::Issues.new.list(user: user, repo: name, per_page: 1000, 
+                                                 access_token: ENV['GITHUB_ACCESS_TOKEN'])
 
     issue_list.each do |issue|
       next unless issue.html_url.include?('issue')
