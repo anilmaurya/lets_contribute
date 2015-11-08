@@ -9,7 +9,9 @@ class IssuesController < ApplicationController
 
   def get_issue
     if params[:language_id].present?
-      @issue = Issue.where(:language_id.in => [params[:language_id]]).order(updated_at: :asc).first
+      @issue = Issue.where(
+        :language_id.in => [params[:language_id]]).order(updated_at: :asc).first ||
+        Issue.order(updated_at: :asc).first
     else
       @issue = Issue.order(updated_at: :asc).first
     end
