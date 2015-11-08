@@ -9,7 +9,8 @@ class IssuesController < ApplicationController
 
   def get_issue
     if params[:language_id].present?
-      @issue = Issue.first#Issue.where(:language_id.in => [params[:language_id]]).sample
+      # return random issue if No issue present.
+      @issue = Issue.where(:language_id.in => [params[:language_id]]).sample || Issue.all.sample
     else
       @issue = Issue.all.sample
     end
