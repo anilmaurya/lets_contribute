@@ -23,5 +23,9 @@ $ ->
 
 
   $('.typeahead').bind('typeahead:select', (ev, suggestion) ->
-    $.get('/issues?language_id=' + suggestion.id)
+    $('input[name="language"]').data('id', suggestion.id);
+    $.get('/issues?language_id=' + suggestion.id);
   )
+
+  $('body').on 'click', 'button:contains(Next)', ->
+    $.get('/issues?language_id=' + $('input[name="language"]').data('id'))

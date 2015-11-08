@@ -43,7 +43,7 @@ class Repository
 
   def owner_url
     url = self.html_url
-    return url.gsub(/\/[a-z]+*$/, '')
+    return url.gsub(/\/[a-z]+$/, '')
   end
 
   private
