@@ -1,12 +1,15 @@
 .project-details
-  %h2.project-details-title
+  %h1.project-details-title
     %a{:href => "#{repository && repository.owner_url}", :target => "_blank"}
       = repository && repository.user
     \/
     %a{:href => "#{repository && repository.html_url}", :target => "_blank"}
       = repository && repository.name
+      %a.btn-floating.btn-large.waves-effect.waves-light.red.right.feeling_lucky
+        %i.large.material-icons.right loop
   %p.project-details-description
     = repository && repository.description
+
   %ul.github-stats
     %li.github-stat
       .github-stat-count
@@ -25,12 +28,15 @@
         = repository && repository.watchers_count
       .github-stat-type Watchers
   %p.issue-title
-    %h5
+    %h6
       = link_to issue.title, issue.html_url, target: :_blank
       %span.grey-text.text-lighten-1= issue_number(issue)
+    .row.grey-text.text-lighten-1.valign-wrapper
+      .col.s1
+        = image_tag issue.creator_avatar, class: 'circle responsive-img'
+      .col.s10.valign
+        = link_to issue.created_by_name, issue.created_by_url, target: :_blank
+        = raw "opened this issue on <b>#{issue.issue_created_at.try(:strftime, '%b %e, %Y')}</b>"
   %p.isssue-description
     %p
       .markdown-body= markdown(issue.body)
-    %button.btn.waves-effect.waves-light{:name => "action", :type => "submit"}
-      Next
-      %i.material-icons.right send
