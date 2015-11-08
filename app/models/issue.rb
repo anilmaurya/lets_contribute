@@ -2,7 +2,7 @@ class Issue
   include Mongoid::Document
   include Mongoid::Timestamps::Updated
 
-  scope :random, -> { skip(rand(0..self.count)).limit(1) }
+  scope :random, -> (skip_count) { skip(skip_count).limit(1) }
 
   field :html_url, type: String
   field :title, type: String

@@ -7,9 +7,10 @@ class ApplicationController < ActionController::Base
 
   def get_issue
     if params[:language_id].present?
-      @issue = Issue.where(:language_ids.in => [params[:language_id]]).random.first
+      total_issues = Issue.where(:language_ids.in => [params[:language_id]]).count
+      @issue = Issue.where(:language_ids.in => [params[:language_id]]).random(rand(0..total_issues)).first
     else
-      @issue = Issue.random.first
+      @issue = Issue.random(rand(0..Issue.count)).first
     end
   end
 end
