@@ -4,11 +4,12 @@ class HomeController < ApplicationController
   protect_from_forgery with: :exception
 
   def index
-    @issue = Issue.order(updated_at: :asc).first
+    get_issue
 
     @languages = Language.not.where(issue_ids: nil).map do |language|
       { id: language.id, name: language.name }
     end
-  end
 
+    render 'home/index'
+  end
 end
