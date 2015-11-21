@@ -1,13 +1,16 @@
 desc "Task to collect data"
 task :collect_data => :environment do
   Language.all.each do |language|
-    begin
-      language.fetch_repositories
-      p "Language --------#{language.name}"
-    rescue Exception => e
-      p "Exception: #{e.to_s}"
-      sleep 1.minute
-      language.fetch_repositories
+    # Donot add new repository for now
+    if language.repositories.empty?
+      begin
+        language.fetch_repositories
+        p "Language --------#{language.name}"
+      rescue Exception => e
+        p "Exception: #{e.to_s}"
+        sleep 1.minute
+        language.fetch_repositories
+      end
     end
   end
 
